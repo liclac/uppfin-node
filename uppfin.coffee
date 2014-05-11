@@ -1,8 +1,10 @@
 express = require 'express'
 lessMiddleware = require 'less-middleware'
+coffeeMiddleware = require 'coffee-middleware'
 
 app = express()
 app.use lessMiddleware(__dirname + '/public')
+app.use coffeeMiddleware({src: __dirname + '/public', encodeSrc: false})
 app.use express.static(__dirname + '/public')
 
 app.use '/p', require('./p').router
