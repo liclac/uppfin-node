@@ -1,0 +1,9 @@
+{
+	"name": "uppfin-node",
+	"description": "My random satellite site",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"bootstrap": "3.x"
+	}
+}
