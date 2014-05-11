@@ -1,0 +1,49 @@
+html, body { margin: 0; padding: 0; }
+
+body {
+	//background-color: #000;
+	//color: #fff;
+	font-family: sans-serif;
+}
+a, a:hover {
+	//color: #ccc;
+	color: #333;
+	text-decoration: none;
+}
+
+#kyuubey {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	height: 50px;
+	margin-top: -25px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 30px;
+	
+	.eye {
+		color: #f00;
+	}
+}
+
+#menu {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	
+	a {
+		font-size: 10pt;
+		padding: 10px 10px 0;
+	}
+	
+	@media(min-width: 481px) {
+		.left {
+			float: left;
+		}
+		.right {
+			float: right;
+		}
+	}
+}

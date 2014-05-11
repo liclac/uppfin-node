@@ -1,0 +1,12 @@
+{
+	"name": "uppfin-node",
+	"description": "My random satellite site",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"express": "4.x",
+		"jade": "1.x",
+		"coffee-script": "1.x",
+		"less-middleware": "1.x"
+	}
+}
