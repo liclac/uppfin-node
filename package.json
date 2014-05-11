@@ -3,6 +3,10 @@
 	"description": "My random satellite site",
 	"version": "0.0.1",
 	"private": true,
+	"devDependencies": {
+		"grunt": "*",
+		"grunt-nodemon": "*"
+	},
 	"dependencies": {
 		"express": "4.x",
 		"jade": "1.x",
