@@ -1,6 +1,7 @@
 extends _base
 block content
 	h1 shorten a link
+	p#shortlink
 	form(method="GET", action=".", novalidate=true)
 		input(name="url", type="url", placeholder="enter url here", autofocus=true)#url
 		input(type="submit", value="Shorten")#submit
