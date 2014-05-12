@@ -25,7 +25,7 @@ router.get '/_api', (req, res) ->
 		url = url.slice 0, -1
 	
 	# Short-circuit if it's an already shortened link
-	if url.indexOf('http://uppf.in') == 0
+	if url.indexOf('http://uppf.in') == 0 || url.indexOf('https://uppf.in')
 		res.send url
 		return
 	
