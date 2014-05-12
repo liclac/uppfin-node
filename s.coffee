@@ -14,11 +14,15 @@ router.get '/', (req, res) ->
 	res.render 's/index.jade'
 
 router.get '/_api', (req, res) ->
-	base = req.protocol + "://" + req.get('host') + "/s/"
 	res.set 'Content-Type', 'text/plain'
+	url = req.query.url
+	
+	# Short-circuit empty URLs
+	if url.length == 0
+		res.send url
+		return
 	
 	# Normalize the URL
-	url = req.query.url
 	if url.indexOf("://") == -1
 		url = "http://" + url
 	if url[url.length-1] == '/'
@@ -30,6 +34,8 @@ router.get '/_api', (req, res) ->
 		return
 	
 	db.find {url: url}, (err, docs) ->
+		base = req.protocol + "://" + req.get('host') + "/s/"
+		
 		if err
 			res.send 500, "Error: " + err
 		else if docs.length > 0
