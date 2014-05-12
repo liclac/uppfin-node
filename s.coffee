@@ -17,11 +17,17 @@ router.get '/_api', (req, res) ->
 	base = req.protocol + "://" + req.get('host') + "/s/"
 	res.set 'Content-Type', 'text/plain'
 	
+	# Normalize the URL
 	url = req.query.url
 	if url.indexOf("://") == -1
 		url = "http://" + url
 	if url[url.length-1] == '/'
 		url = url.slice 0, -1
+	
+	# Short-circuit if it's an already shortened link
+	if url.indexOf('http://uppf.in') == 0
+		res.send url
+		return
 	
 	db.find {url: url}, (err, docs) ->
 		if err
