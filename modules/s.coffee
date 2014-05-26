@@ -2,7 +2,7 @@ express = require 'express'
 Datastore = require 'nedb'
 
 router = express.Router()
-db = new Datastore {filename: __dirname + '/data/s.db'}
+db = new Datastore {filename: __dirname + '/../data/s.db'}
 db.loadDatabase (err) ->
 	if err
 		console.log "Couldn't load s.db: " + err

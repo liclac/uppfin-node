@@ -13,6 +13,7 @@
 		"coffee-script": "1.x",
 		"less-middleware": "1.x",
 		"coffee-middleware": "0.x",
-		"nedb": "0.x"
+		"nedb": "0.x",
+		"marked": "0.x"
 	}
 }

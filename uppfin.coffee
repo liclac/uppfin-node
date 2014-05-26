@@ -8,8 +8,9 @@ app.use lessMiddleware(__dirname + '/public')
 app.use coffeeMiddleware({src: __dirname + '/public', encodeSrc: false})
 app.use express.static(__dirname + '/public')
 
-app.use '/p', require('./p').router
-app.use '/s', require('./s').router
+app.use '/p', require('./modules/p').router
+app.use '/s', require('./modules/s').router
+app.use '/d', require('./modules/d').router
 
 app.get '/', (req, res) ->
 	res.render 'index.jade'
